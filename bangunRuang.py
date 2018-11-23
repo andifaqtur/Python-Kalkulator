@@ -15,20 +15,25 @@ class rumus :
             print '=======LINGKARAN======'
             bangun.lingkaran()
             bangun.ulang()
+            
         elif (pil==2):
             print '=======PERSEGI======='
             bangun.persegi()
             bangun.ulang()
+        
         elif (pil==3):
             print '=======PERSEGI PANJANG======='
             bangun.persegi panjang()
             bangun.ulang()
+        
         elif (pil==4):
             print '=======BALOK======='
             bangun.balok()
             bangun.ulang()
+        
         else :
             print 'Pilihan tidak tersedia'
+            
     def ulang(self):
         print 'n/==================================='
         ulang = raw_input('apakah anda ingin mencoba lagi [Y/N] : ')
@@ -41,6 +46,7 @@ class rumus :
         else :
             print 'pilih [Y/N]'
             bangun.ulang()
+            
     def Lingkaran(self):
         r = float(input('Masukan Nilai Jari-jari : '))
         LuasL = 3.14*r*r
@@ -67,13 +73,9 @@ class rumus :
         print ',tinggi' ,t,
         print 'adalah' ,luasB
 
-
     Bangun = rumus()
     bangun.menu()
     bangun.lingkaran()
     bangun.persegi()
     bangun.persegi panjang()
     bangun.balok()
-        
-    
-        
