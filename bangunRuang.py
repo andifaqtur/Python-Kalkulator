@@ -1,38 +1,79 @@
-class cal():
-    def __init__(self,a,b):
-        self.a=a
-        self.b=b
-    def add(self):
-        return self.a+self.b
-    def mul(self):
-        return self.a*self.b
-    def div(self):
-        return self.a/self.b
-    def sub(self):
-        return self.a-self.b
-a=int(input("Enter first number: "))
-b=int(input("Enter second number: "))
-obj=cal(a,b)
-choice=1
-while choice!=0:
-    print("0. Exit")
-    print("1. Add")
-    print("2. Subtraction")
-    print("3. Multiplication")
-    print("4. Division")
-    choice=int(input("Enter choice: "))
-    if choice==1:
-        print("Result: ",obj.add())
-    elif choice==2:
-        print("Result: ",obj.sub())
-    elif choice==3:
-        print("Result: ",obj.mul())
-    elif choice==4:
-        print("Result: ",round(obj.div(),2))
-    elif choice==0:
-        print("Exiting!")
-    else:
-        print("Invalid choice!!")
+class rumus :
+    def menu(self):
+        print '''
+        =====BANGUN RUANG=====
+        ======================
+        1.LINGKARAN
+        2.PERSEGI
+        3.PERSEGI PANJANG
+        4.BALOK
+        ======================
+        '''
+        pil = input('Masukan Pilihan Anda : ')
+        print '\n'
+        if (pil==1):
+            print '=======LINGKARAN======'
+            bangun.lingkaran()
+            bangun.ulang()
+        elif (pil==2):
+            print '=======PERSEGI======='
+            bangun.persegi()
+            bangun.ulang()
+        elif (pil==3):
+            print '=======PERSEGI PANJANG======='
+            bangun.persegi panjang()
+            bangun.ulang()
+        elif (pil==4):
+            print '=======BALOK======='
+            bangun.balok()
+            bangun.ulang()
+        else :
+            print 'Pilihan tidak tersedia'
+    def ulang(self):
+        print 'n/==================================='
+        ulang = raw_input('apakah anda ingin mencoba lagi [Y/N] : ')
+        print '=====================================/n'
+        if (ulang=='Y' or ulang=='N'):
+            bangun.menu()
+        elif (ulang=='n' or ulang=='N'):
+            print 'Thank you !'
+            quit()
+        else :
+            print 'pilih [Y/N]'
+            bangun.ulang()
+    def Lingkaran(self):
+        r = float(input('Masukan Nilai Jari-jari : '))
+        LuasL = 3.14*r*r
+        print 'Luas Lingkaran dengan jari-jari',r,'adalah'luasL
+
+    def Persegi(self):
+        s = input('Masukan Nilai sisi Persegi : '))
+        LuasP = s*s
+        print 'Luas dari persegi dengan sisi',s,'adalah'LuasP
+
+    def Persegi Panjang(self):
+        P = input('Masukan Nilai Panjang : ')
+        l = input('Masukan Nilai Lebar : ')
+        LuasPP =P*l
+        print 'Luas dari persegi panjang',p,'dan lebar',1,'adalah',luasPP
  
- 
-print()
+    def Balok(self):
+        p = input('Masukan Nilai Panjang  : ')
+        l = input('Masukan Nilai Lebar    : ')
+        t = input('Masukan Nilai Tinggi   : ')
+        LuasB = p*l*t
+        print 'Nilai Balok dengan Panjang'
+        print ',lebar' ,1,
+        print ',tinggi' ,t,
+        print 'adalah' ,luasB
+
+
+    Bangun = rumus()
+    bangun.menu()
+    bangun.lingkaran()
+    bangun.persegi()
+    bangun.persegi panjang()
+    bangun.balok()
+        
+    
+        
