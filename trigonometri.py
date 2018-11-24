@@ -1,27 +1,34 @@
 import math
-class Trigonometri:
-      pass          
 
-class Msin(Trigonometri):
+class Msin():
     
     def __init__(self):
-       print ("mode penyelesaian sin")
+       print("===============================")
+       print("====  K A L K U L A T O R  ====")
+       print("==== mode penyelesaian sin ====")
+       print("=============================== \n")
     
-    def siIN(self,sudut):
+    def siIN(self,sudutS):
         return math.sin(sudutS)
 
-class Mcos(Trigonometri):
+class Mcos():
     
     def __init__(self):
-       print ("mode penyelesaian cos")
+       print("===============================")
+       print("====  K A L K U L A T O R  ====")
+       print("==== mode penyelesaian cos ====")
+       print("=============================== \n")
     
     def coOS(self,sudutC):
         return math.cos(sudutC)
     
-class Mtan(Trigonometri):
+class Mtan():
     
     def __init__(self):
-       print ("mode penyelesaian tan")
+       print("===============================")
+       print("====  K A L K U L A T O R  ====")
+       print("==== mode penyelesaian tan ====")
+       print("=============================== \n")
     
     def taAN(self,sudutT):
         return math.tan(sudutT)
@@ -30,30 +37,13 @@ class Mtan(Trigonometri):
 
 
 def Menu():
-    print("*"*5,"kalkulator Trigonometri",5*"*")
-    print("a). Sin\nb). Cos \nc). Tan\nd). Quit")
-    mm= input("pilih menu :")
-    return mm.lower()
-while True:
-    pilih = Menu()
-    if pilih == 'a':
-        a= Msin()
-        sudutS = int (input("Masukan sudut Sin ="))
-        print(" hasil Sin",sudutS,"= ",a.siIN(sudutS))
-        
-    elif pilih == 'b':
-        b= Mcos()
-        sudutC = int (input("Masukan sudut Cos ="))
-        print(" hasil Cos",sudutC,"= ",b.coOS(sudutC))
-        
-    elif pilih == 'c':
-        c= Mtan()
-        sudutT = int (input("Masukan sudut Tan ="))
-        print(" hasil Tan",sudutT,"= ",c.taAN(sudutT))
-        
-    elif pilih == 'd':
-        break
-    else:
-        print(" anda memilih keluar")
+    print("===============================")
+    print("====  K A L K U L A T O R  ====")
+    print("====     Trigonometri      ====")
+    print("===============================")
+    print("[1] Sin \n[2] Cos \n[3] Tan \n[4] <<Kembali")
+    mm= int(input("Pilihan :"))
+    return mm
+
 
        
