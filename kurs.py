@@ -1,80 +1,46 @@
-def clear ():
-    import os
-    os.system('cls')
-
-
-
-def KonversiUang():
-    print ("")
-    print ("")
-    print ("\tProgram Konversi Mata Uang")
-    print ("\n=================================================")
-    print ("")
-    print ("\nPilihan :")
-    for MataUang in ("1. Rupiah","2. Dollar US","3. Euro","4. Yen","5. exit"):
-        print (MataUang)
-    print ("")
- 
-
 class kurs():
+        def __init__(self):
+            print("===============================") #judul menu
+            print("====  K A L K U L A T O R  ====")
+            print("====    Kurs Mata Uang     ====")
+            print("=============================== \n")
+        
+        def Rp(self,k):                              #fungsi konversi rupiah ke mata uang lain
+            print ('\n')
+            euro=0.000061
+            usd=0.000069
+            print (k,'IDR','=',k*euro,'EUR')
+            print (k,'IDR','=',k*usd,'USD')
+            print (k,'IDR','=',k*0.007766,'JPY')
+            
+        def USD (self,k):                            #fungsi konversi dolar ke mata uang lain
+            print ('\n')
+            print (k,'USD','=',k*0.88,'EUR')
+            print (k,'USD','=',k*14544.54,'IDR')
+            print (k,'USD','=',k*112.95,'JPY')
+            
+        def EURO (self,k):                           #fungsi konversi euro ke mata uang lain
+            print ('\n')
+            print (k,'EUR','=',k*16492,'IDR')
+            print (k,'EUR','=',k*128.12,'JPY')
+            print (k,'EUR','=',k*1.13,'USD')
+            
+        def JPY (self,k):                           #fungsi konversi yen ke mata uang lain
+            print ('\n')
+            print (k,'JPY','=',k*0.0078,'EUR')
+            print (k,'JPY','=',k*0.0089,'USD')
+            print (k,'JPY','=',k*129.22,'IDR')
+def menuKurs():                                     #fungsi submenu kurs
+        print("===============================")
+        print("====  K A L K U L A T O R  ====")
+        print("====    Kurs Mata Uang     ====")
+        print("===============================")
+        print('[1] US Dollar \n[2] Rupiah \n[3] Euro \n[4] Japan Yen \n[5] <<Kembali')
+        pilih=int(input('Pilihan :'))
+        return pilih
+
     
-        def Rp(self,k):
-            print (k,'IDR','=',k*0.000083,'EUR')
-            print (k,'IDR','=',k*0.00011,'USD')
-            print (k,'IDR','=',k*0.012,'JPY')
-            
-        def USD (self,k):
-            print ("k",'USD','=',k*0.7566,'EUR')
-            print ("k",'USD','=',k*9107.47,'IDR')
-            print ("k",'USD','=',k*118.36,'JPY')
-            
-        def EUR (self,k):
-            print ("k",'EUR','=',k*12037,'IDR')
-            print ("k",'EUR','=',k*156.44,'JPY')
-            print ("k",'EUR','=',k*1.32,'USD')
-            
-        def JPY (self,k):
-            print ("k",'JPY','=',k*0.006,'EUR')
-            print ("k",'JPY','=',k*0.008,'USD')
-            print ("k",'JPY','=',k*76.94,'IDR')
 
-
-    
-
-p = input ("Masukan Pilihan : ")
-if (p == "1"):
-        k = input ("Masukan nilai Rupiah : ")
-        hasil = kurs()
-        hasil.Rp(k)
-        print (k,'IDR','=',k*0.000083,'EUR')
-        print (k,'IDR','=',k*0.00011,'USD')
-        print (k,'IDR','=',k*0.012,'JPY')
-        print ("\n=================================================")
-        print ("")
-        
-elif (p == "2"):
-        k = input ("Masukan nilai Dollar : ")
-        hasil = kurs()
-        hasil.USD(k)
-        print ("\n=================================================")
-        print ("")
-        
-elif (p == "3"):
-        k = input ("Masukan nilai Euro : ")
-        hasil = kurs()
-        hasil.EUR(k)
-        print ("\n=================================================")
-        print ("")
-        
-elif (p== "4"):
-        k = input ("Masukan nilai Yen :  ")
-        hasil = kurs()
-        hasil.JPY (k)
-        print ("\n=================================================")
-        print ("")
-        
-elif (p == "5"):
-        exit
 
 
        
