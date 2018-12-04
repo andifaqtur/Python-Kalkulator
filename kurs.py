@@ -1,3 +1,4 @@
+import data as dt
 class kurs():
         def __init__(self):
             print("===============================") #judul menu
@@ -6,30 +7,25 @@ class kurs():
             print("=============================== \n")
         
         def Rp(self,k):                              #fungsi konversi rupiah ke mata uang lain
-            print ('\n')
-            euro=0.000061
-            usd=0.000069
-            print (k,'IDR','=',k*euro,'EUR')
-            print (k,'IDR','=',k*usd,'USD')
-            print (k,'IDR','=',k*0.007766,'JPY')
-            
+            teks = "\n{} IDR = {} EUR \n{} IDR = {} USD \n{} IDR = {} JPY \n---------------------".format(k,k*0.000061,k,k*0.000069,k,k*0.007766)
+            print(teks)
+            outputFile=dt.data()
+            outputFile.dataSaver(teks)
         def USD (self,k):                            #fungsi konversi dolar ke mata uang lain
-            print ('\n')
-            print (k,'USD','=',k*0.88,'EUR')
-            print (k,'USD','=',k*14544.54,'IDR')
-            print (k,'USD','=',k*112.95,'JPY')
-            
+            teks = "\n{} USD = {} EUR \n{} USD = {} IDR \n{} USD = {} JPY \n---------------------".format(k,k*0.88,k,k*14544.54,k,k*112.95)
+            print(teks)
+            outputFile=dt.data()
+            outputFile.dataSaver(teks)       
         def EURO (self,k):                           #fungsi konversi euro ke mata uang lain
-            print ('\n')
-            print (k,'EUR','=',k*16492,'IDR')
-            print (k,'EUR','=',k*128.12,'JPY')
-            print (k,'EUR','=',k*1.13,'USD')
-            
+            teks = "\n{} EUR = {} IDR \n{} EUR = {} JPY \n{} EUR = {} USD \n---------------------".format(k,k*16492,k,k*128.12,k,k*1.13)
+            print(teks)
+            outputFile=dt.data()
+            outputFile.dataSaver(teks)
         def JPY (self,k):                           #fungsi konversi yen ke mata uang lain
-            print ('\n')
-            print (k,'JPY','=',k*0.0078,'EUR')
-            print (k,'JPY','=',k*0.0089,'USD')
-            print (k,'JPY','=',k*129.22,'IDR')
+            teks = "\n{} JPY = {} EUR \n{} JPY = {} USD \n{} JPY = {} IDR \n---------------------".format(k,k*0.0078,k,k*0.0089,k,k*129.22)
+            print(teks)
+            outputFile=dt.data()
+            outputFile.dataSaver(teks)
 def menuKurs():                                     #fungsi submenu kurs
         print("===============================")
         print("====  K A L K U L A T O R  ====")
